@@ -12,8 +12,8 @@ constructor(props)
   render() {
     return (
      <form>
-
-
+       <input onChange={this.props.change}  />
+      <input type="submit" value="Submit" />
 
      </form>
      
