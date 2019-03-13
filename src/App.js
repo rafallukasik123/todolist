@@ -40,15 +40,25 @@ handleSubmit =e=>{
 
 
 }
+deleteItem = key => {
+
+
+  const filteredItems = this.state.tablica.filter(item => {
+    return item.key !== key
+  })
+  this.setState({
+    tablica: filteredItems,
+  })
+}
 
 
   render() {
 
-   //console.log(this.state.tablica);
+   
     return (
       <div className="App">
       <Dodawanie change={this.handlechange} submit={this.handleSubmit} />
-      <Wyswietlanie result={this.state.tablica} />
+      <Wyswietlanie result={this.state.tablica} usuwanie={this.deleteItem} />
 
       </div>
     );
