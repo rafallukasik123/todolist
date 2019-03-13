@@ -31,9 +31,9 @@ this.setState({
 handleSubmit =e=>{
   e.preventDefault();
   const temp= {tekst : this.state.item.tekst , key : Date.now()};
-  console.log(temp);
+
   let tempTable  = [...this.state.tablica,temp];
-  console.log(tempTable);
+
   this.setState({
     tablica: tempTable,
   })
@@ -48,7 +48,7 @@ handleSubmit =e=>{
     return (
       <div className="App">
       <Dodawanie change={this.handlechange} submit={this.handleSubmit} />
-      <Wyswietlanie result={this.item} />
+      <Wyswietlanie result={this.state.tablica} />
 
       </div>
     );
