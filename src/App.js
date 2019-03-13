@@ -47,9 +47,7 @@ handleSubmit =e=>{
    //console.log(this.state.tablica);
     return (
       <div className="App">
-      <Dodawanie change={this.handlechange} submit={this.handleSubmit} />
-      <Wyswietlanie result={this.item} />
-
+         
       </div>
     );
   }
