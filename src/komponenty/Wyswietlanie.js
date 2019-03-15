@@ -12,8 +12,19 @@ constructor(props){
 
 
   createTask(item){
-    return  <li key={item.key} onClick={() => this.props.usuwanie(item.key)}>
-    {item.tekst}
+
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+    
+    today = mm + ' ' + dd + ' ' + yyyy;
+    
+    console.log(today);
+    return  <li key={item.key} >
+    {item.tekst} 
+    {today}
+    <input type="button" defaultValue="usun" onClick={() => this.props.usuwanie(item.key)} />
   </li>
   }
 
