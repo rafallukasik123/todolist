@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-
+import '../Style/style.scss';
 
 class Dodawanie extends Component {
 constructor(props)
@@ -11,9 +11,9 @@ constructor(props)
 
   render() {
     return (
-     <form onSubmit={this.props.submit}>
+     <form className="dodawanie_form" onSubmit={this.props.submit}>
        <input onChange={this.props.change}  />
-      <input type="submit" value="Submit" />
+      <input className="dodawanie_form--submit" type="submit" value="Submit" />
 
      </form>
      

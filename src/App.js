@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './App.css';
+import './Style/style.scss';
 import Dodawanie from './komponenty/Dodawanie';
 import Wyswietlanie from './komponenty/Wyswietlanie';
 
@@ -36,6 +36,7 @@ handleSubmit =e=>{
 
   this.setState({
     tablica: tempTable,
+    
   })
 
 
@@ -56,9 +57,9 @@ deleteItem = key => {
 
    
     return (
-      <div className="App">
-      <Dodawanie change={this.handlechange} submit={this.handleSubmit} />
-      <Wyswietlanie result={this.state.tablica} usuwanie={this.deleteItem} />
+      <div className="body">
+      <Dodawanie className="dodawanie" change={this.handlechange} submit={this.handleSubmit} />
+      <Wyswietlanie className="wyswietlanie" result={this.state.tablica} usuwanie={this.deleteItem} />
 
       </div>
     );
